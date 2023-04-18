@@ -1,0 +1,950 @@
+/* Variables - Custom Country JavaScript  */
+.AZON-country-list-wrapper {
+  font-family: "Roboto";
+  position: relative;
+  user-select: none; }
+  .AZON-country-list-wrapper .AZON-country-list-default {
+    border: 1px solid #6995dc;
+    width: 180px;
+    padding: 12px 27px 13px 14px;
+    background: #ffffff;
+    display: inline-block;
+    line-height: 15px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: #1e1e1e; }
+    .AZON-country-list-wrapper .AZON-country-list-default:hover {
+      background: #315898;
+      color: #fff; }
+      .AZON-country-list-wrapper .AZON-country-list-default:hover:after {
+        color: #fff; }
+    .AZON-country-list-wrapper .AZON-country-list-default:after {
+      font-family: dashicons;
+      content: "\f347";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      color: #315898;
+      font-size: 13px; }
+    .AZON-country-list-wrapper .AZON-country-list-default span {
+      display: inline-block;
+      font-size: 13px;
+      vertical-align: middle; }
+    .AZON-country-list-wrapper .AZON-country-list-default img {
+      height: 14px;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle; }
+  .AZON-country-list-wrapper ul {
+    display: block;
+    width: 180px;
+    background: #fff;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    border: 1px solid #e8e9ed;
+    z-index: 99;
+    display: none; }
+    .AZON-country-list-wrapper ul li {
+      list-style: none;
+      padding: 10px 15px;
+      line-height: 10px;
+      margin-bottom: 0;
+      cursor: pointer; }
+      .AZON-country-list-wrapper ul li:hover {
+        background: #315898;
+        color: #fff; }
+      .AZON-country-list-wrapper ul li span {
+        display: inline-block;
+        font-size: 13px;
+        vertical-align: middle; }
+      .AZON-country-list-wrapper ul li img {
+        height: 14px;
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle; }
+
+/*
+ * Container style
+ */
+.ps {
+  overflow: hidden !important;
+  overflow-anchor: none;
+  -ms-overflow-style: none;
+  touch-action: auto;
+  -ms-touch-action: auto; }
+
+/*
+ * Scrollbar rail styles
+ */
+.ps__rail-x {
+  display: none;
+  opacity: 0;
+  transition: background-color .2s linear, opacity .2s linear;
+  -webkit-transition: background-color .2s linear, opacity .2s linear;
+  height: 15px;
+  /* there must be 'bottom' or 'top' for ps__rail-x */
+  bottom: 0px;
+  /* please don't change 'position' */
+  position: absolute; }
+
+.ps__rail-y {
+  display: none;
+  opacity: 0;
+  transition: background-color .2s linear, opacity .2s linear;
+  -webkit-transition: background-color .2s linear, opacity .2s linear;
+  width: 15px;
+  /* there must be 'right' or 'left' for ps__rail-y */
+  right: 0;
+  /* please don't change 'position' */
+  position: absolute; }
+
+.ps--active-x > .ps__rail-x, .ps--active-y > .ps__rail-y {
+  display: block;
+  background-color: transparent; }
+
+.ps:hover > .ps__rail-x, .ps:hover > .ps__rail-y {
+  opacity: 0.6; }
+
+.ps--focus > .ps__rail-x, .ps--focus > .ps__rail-y {
+  opacity: 0.6; }
+
+.ps--scrolling-x > .ps__rail-x, .ps--scrolling-y > .ps__rail-y {
+  opacity: 0.6; }
+
+.ps .ps__rail-x:hover, .ps .ps__rail-y:hover, .ps .ps__rail-x:focus, .ps .ps__rail-y:focus, .ps .ps__rail-x.ps--clicking, .ps .ps__rail-y.ps--clicking {
+  background-color: #eee;
+  opacity: 0.9; }
+
+/*
+ * Scrollbar thumb styles
+ */
+.ps__thumb-x {
+  background-color: #aaa;
+  border-radius: 6px;
+  transition: background-color .2s linear, height .2s ease-in-out;
+  -webkit-transition: background-color .2s linear, height .2s ease-in-out;
+  height: 6px;
+  /* there must be 'bottom' for ps__thumb-x */
+  bottom: 2px;
+  /* please don't change 'position' */
+  position: absolute; }
+
+.ps__thumb-y {
+  background-color: #aaa;
+  border-radius: 6px;
+  transition: background-color .2s linear, width .2s ease-in-out;
+  -webkit-transition: background-color .2s linear, width .2s ease-in-out;
+  width: 6px;
+  /* there must be 'right' for ps__thumb-y */
+  right: 2px;
+  /* please don't change 'position' */
+  position: absolute; }
+
+.ps__rail-x:hover > .ps__thumb-x, .ps__rail-x:focus > .ps__thumb-x, .ps__rail-x.ps--clicking .ps__thumb-x {
+  background-color: #999;
+  height: 11px; }
+
+.ps__rail-y:hover > .ps__thumb-y, .ps__rail-y:focus > .ps__thumb-y, .ps__rail-y.ps--clicking .ps__thumb-y {
+  background-color: #999;
+  width: 11px; }
+
+/* MS supports */
+@supports (-ms-overflow-style: none) {
+  .ps {
+    overflow: auto !important; } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ps {
+    overflow: auto !important; } }
+
+#WooZone-NAWS-wrapper {
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  float: left;
+  width: 100%; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-quick-menu {
+    position: fixed;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    width: 250px;
+    margin-top: -32px;
+    z-index: 99999;
+    padding: 10px;
+    padding-top: 32px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-quick-menu.__is_opened {
+      bottom: 0;
+      top: auto; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-quick-menu h2 {
+      margin: 0;
+      padding: 0;
+      background: #315898;
+      color: #fff;
+      font-size: 12px;
+      display: block;
+      padding: 8px 10px;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      font-weight: bold;
+      text-transform: uppercase; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-quick-menu h2 span {
+        margin-right: 5px;
+        font-size: 14px;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        padding: 5px;
+        box-sizing: content-box;
+        background: #374a87; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-quick-menu h2:hover {
+        background: #374a87;
+        cursor: pointer; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-quick-menu p {
+      font-size: 11px;
+      color: #424242; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-quick-menu ul {
+      margin: 0;
+      padding: 0; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-quick-menu ul li {
+        padding: 0;
+        margin: 0; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-quick-menu ul li a {
+          background: #3d3f7a;
+          display: block;
+          padding: 5px 10px;
+          color: #fff;
+          font-size: 12px;
+          margin-bottom: 5px;
+          cursor: pointer;
+          border: 1px solid #3d3f7a;
+          border-radius: 4px; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-quick-menu ul li a:hover {
+            background: #296cae; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-search-form {
+    display: grid;
+    grid-template-columns: 200px 200px 1fr 150px 170px;
+    grid-gap: 20px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-form .WooZone-NAWS-custom-select {
+      display: inline-block;
+      height: 45px;
+      background: #fff;
+      border: 1px solid #6995dc;
+      border-radius: 5px;
+      position: relative;
+      cursor: pointer;
+      color: #1e1e1e; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-search-form .WooZone-NAWS-custom-select:hover {
+        background: #315898;
+        color: #fff; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-form .WooZone-NAWS-custom-select:hover:after {
+          color: #fff; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-search-form .WooZone-NAWS-custom-select select option {
+        color: #1e1e1e; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-form .WooZone-NAWS-custom-select:after {
+      font-family: dashicons;
+      content: "\F347";
+      display: block;
+      position: absolute;
+      right: 12px;
+      top: 13px;
+      z-index: 8;
+      font-size: 13px;
+      font-weight: bold;
+      color: #315898; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-form select {
+      z-index: 9;
+      padding: 12px 15px;
+      margin: 0;
+      height: auto;
+      border-radius: 5px;
+      width: 100%;
+      font-weight: bold;
+      box-shadow: none !important;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      position: relative;
+      display: block;
+      border: none;
+      padding-right: 30px;
+      position: absolute;
+      background: transparent;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-form input {
+      border: 1px solid #d9d9d9;
+      padding: 2px 15px;
+      border-radius: 2px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-form .AZON-country-list-default {
+      width: 100%; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-form .notice {
+      padding: 10px;
+      margin: 0; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-form textarea {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 300px;
+      height: 200px;
+      display: none; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-form .wz-search-btn {
+      background: #26b36c;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 12px;
+      padding: 10px;
+      display: inline-block;
+      border: none;
+      font-weight: bold;
+      text-transform: uppercase; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-search-form .wz-search-btn:hover {
+        background: #000; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5); }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller {
+      display: inline-block;
+      position: relative;
+      width: 64px;
+      height: 64px;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      margin-left: -32px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div {
+        animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        transform-origin: 32px 32px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:after {
+          content: " ";
+          display: block;
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #fff;
+          margin: -3px 0 0 -3px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(1) {
+          animation-delay: -0.036s; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(1):after {
+            top: 50px;
+            left: 50px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(2) {
+          animation-delay: -0.072s; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(2):after {
+            top: 54px;
+            left: 45px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(3) {
+          animation-delay: -0.108s; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(3):after {
+            top: 57px;
+            left: 39px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(4) {
+          animation-delay: -0.144s; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(4):after {
+            top: 58px;
+            left: 32px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(5) {
+          animation-delay: -0.18s; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(5):after {
+            top: 57px;
+            left: 25px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(6) {
+          animation-delay: -0.216s; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(6):after {
+            top: 54px;
+            left: 19px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(7) {
+          animation-delay: -0.252s; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(7):after {
+            top: 50px;
+            left: 14px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(8) {
+          animation-delay: -0.288s; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-loader .lds-roller div:nth-child(8):after {
+            top: 45px;
+            left: 10px; }
+
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-search-results {
+    margin-top: 30px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-results h2 {
+      padding: 0;
+      margin: 0;
+      padding-bottom: 20px;
+      text-transform: uppercase;
+      color: #212121;
+      display: none;
+      font-size: 15px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li {
+        border: 1px solid #F5F5F5;
+        padding: 20px;
+        position: relative;
+        margin: 0; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li:hover {
+          background: #F5F5F5; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li > a {
+          display: block;
+          text-align: center;
+          background: #fff; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li h5 {
+          margin: 0;
+          margin-top: 15px;
+          display: block;
+          font-size: 12px; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li h5 a {
+            color: #6A1B9A; }
+            #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li h5 a:hover {
+              color: #9C27B0; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li h4 {
+          margin: 0;
+          margin-top: 5px;
+          margin-bottom: 5px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li .WooZone-NAWS-price .a-price-symbol {
+          top: -4px;
+          font-size: 11px;
+          position: relative;
+          margin-right: 1px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li .WooZone-NAWS-price .a-price-fraction {
+          top: -4px;
+          font-size: 11px;
+          position: relative;
+          margin-left: 1px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li .WooZone-NAWS-price .a-price-decimal {
+          display: none; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li .WooZone-NAWS-price .a-offscreen {
+          display: none; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li .WooZone-NAWS-price > span:last-child {
+          font-size: 16px;
+          font-weight: bold; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li .WooZone-NAWS-already-imported {
+          border: 1px solid #fd7171;
+          background: #fd7171;
+          padding: 5px 10px;
+          color: #fff;
+          font-size: 12px;
+          border-radius: 3px;
+          text-transform: uppercase;
+          font-weight: bold; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li .WooZone-NAWS-loader .lds-roller {
+          top: 50%;
+          margin-top: -32px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li button {
+          border: 1px solid #3ab713;
+          position: absolute;
+          display: block;
+          top: 50%;
+          left: 50%;
+          font-size: 12px;
+          padding: 8px 10px;
+          background: #3ab713;
+          color: #fff;
+          width: 140px;
+          margin-left: -60px;
+          text-transform: uppercase;
+          font-weight: bold;
+          border-radius: 3px; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li button:hover {
+            background: #39c474; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results ul li .WooZone-NAWS-data-loaded {
+          background: #d32f2f;
+          border: 1px solid #b71c1c;
+          padding: 4px 10px;
+          color: #fff;
+          margin-top: 20px;
+          display: block;
+          text-align: center; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-results .WooZone-NAWS-pagination-wrapper {
+      text-align: center; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-search-results .WooZone-NAWS-pagination {
+      display: block;
+      margin: 20px 0;
+      margin-left: 1px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-search-results .WooZone-NAWS-pagination li {
+        display: inline-block;
+        padding: 0;
+        margin-left: -1px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results .WooZone-NAWS-pagination li a {
+          padding: 10px 15px;
+          background: none;
+          color: #212121; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results .WooZone-NAWS-pagination li.previous, #WooZone-NAWS-wrapper .WooZone-NAWS-search-results .WooZone-NAWS-pagination li.next {
+          border: none; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-search-results .WooZone-NAWS-pagination li.previous.disabled a, #WooZone-NAWS-wrapper .WooZone-NAWS-search-results .WooZone-NAWS-pagination li.next.disabled a {
+            color: #E0E0E0; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results .WooZone-NAWS-pagination li.break-me a {
+          color: #9E9E9E; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-search-results .WooZone-NAWS-pagination li._is_selected {
+          background: #3e3b75;
+          border: 1px solid #f2f2f2; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-search-results .WooZone-NAWS-pagination li._is_selected a {
+            color: #fff;
+            font-weight: bold; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-import-form {
+    margin-top: 40px;
+    display: block;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-import-form select {
+      width: 100%;
+      margin-bottom: 10px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-import-form p {
+      font-size: 12px;
+      color: #BDBDBD;
+      margin: 0;
+      font-style: italic;
+      margin-bottom: 20px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting {
+      border-right: 1px solid #2f2f2f;
+      padding-right: 25px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting:last-child {
+        border: none; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-base-control__field .components-checkbox-control__input {
+        margin: 0;
+        position: relative;
+        bottom: 3px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-base-control__field .components-checkbox-control__label {
+        padding-left: 10px;
+        color: #fff;
+        font-weight: normal; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control .components-base-control__field {
+        display: grid;
+        grid-template-columns: 1fr 55px;
+        grid-gap: 15px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider {
+        -webkit-appearance: none;
+        vertical-align: middle;
+        outline: none;
+        border: none;
+        padding: 0;
+        background: none; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider::-webkit-slider-runnable-track {
+        background-color: #d7dbdd;
+        height: 6px;
+        border-radius: 3px;
+        border: 1px solid transparent; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider[disabled]::-webkit-slider-runnable-track {
+        border: 1px solid #d7dbdd;
+        background-color: transparent;
+        opacity: 0.4; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider::-moz-components-range-control__slider-track {
+        background-color: #d7dbdd;
+        height: 6px;
+        border-radius: 3px;
+        border: none; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider::-ms-track {
+        color: transparent;
+        border: none;
+        background: none;
+        height: 6px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider::-ms-fill-lower {
+        background-color: #d7dbdd;
+        border-radius: 3px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider::-ms-fill-upper {
+        background-color: #d7dbdd;
+        border-radius: 3px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider::-ms-tooltip {
+        display: none;
+        /* display and visibility only */ }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider::-moz-components-range-control__slider-thumb {
+        border-radius: 20px;
+        height: 18px;
+        width: 18px;
+        border: none;
+        background: none;
+        background-color: #606670; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider:active::-moz-components-range-control__slider-thumb {
+        outline: none; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider::-webkit-slider-thumb {
+        -webkit-appearance: none !important;
+        border-radius: 100%;
+        background-color: #606670;
+        height: 18px;
+        width: 18px;
+        margin-top: -7px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider[disabled]::-webkit-slider-thumb {
+        background-color: transparent;
+        border: 1px solid #d7dbdd; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider:active::-webkit-slider-thumb {
+        outline: none; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider::-ms-thumb {
+        border-radius: 100%;
+        background-color: #606670;
+        height: 18px;
+        width: 18px;
+        border: none; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__slider:active::-ms-thumb {
+        border: none; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .WooZone-NAWS-field-threads .components-base-control__field {
+        display: block; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .WooZone-NAWS-field-threads .components-base-control__field label {
+          display: block;
+          font-weight: bold;
+          color: #fff;
+          padding-top: 20px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .WooZone-NAWS-field-threads .components-base-control__field .components-range-control__slider {
+          width: 72%;
+          margin-right: 8%;
+          display: inline-block; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .WooZone-NAWS-field-threads .components-base-control__field .components-range-control__number {
+          width: 20%;
+          display: inline-block; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-setting .components-range-control__number {
+        border: 1px solid #616161;
+        background: #212121;
+        color: #000;
+        border-radius: 5px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-stop-btn,
+    #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-import-btn {
+      border: 1px solid #3ab713;
+      background: #3ab713;
+      color: #fff;
+      padding: 8px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: bold; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-stop-btn:hover,
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-import-btn:hover {
+        border: 1px solid #39c474;
+        background: #39c474; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-stop-btn.WooZone-NAWS-stop-btn,
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-import-btn.WooZone-NAWS-stop-btn {
+        background: #ef5350;
+        border: 1px solid #f44336; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-stop-btn.WooZone-NAWS-stop-btn:hover,
+        #WooZone-NAWS-wrapper .WooZone-NAWS-import-form .WooZone-NAWS-import-btn.WooZone-NAWS-stop-btn:hover {
+          border: 1px solid #b71c1c;
+          background: #b71c1c; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-data-added {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #16b14e;
+    padding: 4px 15px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-import-block-wrapper {
+    background: #212121;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px;
+    padding: 20px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 40px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-import-block-wrapper h3 {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: bold;
+      padding-bottom: 15px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-import-block-wrapper ul {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-gap: 15px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-block-wrapper ul li {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        position: relative;
+        border-radius: 6px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-import-block-wrapper ul li img {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+          padding: 5px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-import-block-wrapper ul li h5 {
+          padding: 0;
+          margin: 0;
+          text-align: center;
+          padding: 8px 0;
+          text-transform: uppercase;
+          background: #673AB7;
+          color: #fff;
+          font-size: 13px;
+          font-weight: normal;
+          border-radius: 5px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-import-block-wrapper ul li .dashicons-no-alt {
+          color: #f44336;
+          font-size: 25px;
+          padding: 2px;
+          box-sizing: content-box;
+          width: auto;
+          height: auto;
+          cursor: pointer;
+          position: absolute;
+          top: 4px;
+          right: 4px; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-import-block-wrapper ul li .dashicons-no-alt:hover {
+            background: #f44336;
+            color: #fff;
+            border-radius: 5px; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper {
+    margin-top: 40px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: -20px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper.is_hide .WooZone-NAWS-import-log-scrollbar {
+      display: none; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-show-log-btn {
+      right: 0px;
+      background: #3f3976;
+      color: #fff;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 14px;
+      padding-left: 14px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-show-log-btn span:last-child {
+        margin-left: 5px;
+        text-transform: uppercase; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-show-log-btn:hover {
+        background: #2672b7; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log-scrollbar {
+      overflow-y: auto;
+      max-height: 450px;
+      background: #fff;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      grid-gap: 20px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log-scrollbar .WooZone-NAWS-import-log-anchors-wrapper {
+        overflow-y: auto;
+        max-height: 410px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log-scrollbar .WooZone-NAWS-import-log-anchors {
+        padding: 0;
+        margin: 0; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log-scrollbar .WooZone-NAWS-import-log-anchors li {
+          border: 1px solid #E0E0E0;
+          margin: 0;
+          padding: 5px 10px;
+          background: #F5F5F5;
+          cursor: pointer;
+          margin-bottom: -1px;
+          overflow: hidden;
+          display: grid;
+          grid-template-columns: 60px 1fr;
+          grid-gap: 10px; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log-scrollbar .WooZone-NAWS-import-log-anchors li .WooZone-NAWS-asin-total-times {
+            border: 1px solid #231f4a;
+            line-height: 20px;
+            font-size: 10px;
+            text-align: center;
+            color: #a6a3ba;
+            background: #302b5c; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log-scrollbar .WooZone-NAWS-import-log-anchors li.WooZone-NAWS-asin-selected {
+            background: #3f3976;
+            color: #fff;
+            border-color: #3f3976; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log-scrollbar .WooZone-NAWS-import-log-anchors li:hover:not(.WooZone-NAWS-asin-selected) {
+            background: #EEEEEE; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log-scrollbar .WooZone-NAWS-import-log-anchors li span:first-child {
+            font-size: 12px;
+            position: relative;
+            bottom: -2px; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log-scrollbar .WooZone-NAWS-import-log-anchors li span:last-child {
+            display: inline-block;
+            font-size: 11px;
+            margin-left: 5px;
+            background: #FF9800;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            float: right; }
+            #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log-scrollbar .WooZone-NAWS-import-log-anchors li span:last-child.WooZone-NAWS-asin-valid {
+              background: #43A047; }
+            #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log-scrollbar .WooZone-NAWS-import-log-anchors li span:last-child.WooZone-NAWS-asin-invalid {
+              background: #e53935; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: block;
+      max-width: 100%;
+      border: 1px solid #E0E0E0;
+      padding: 10px;
+      overflow-y: auto;
+      max-height: 400px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log p {
+        font-size: 12px;
+        margin-top: 0; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log .WooZone-NAWS-import-time {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 11px;
+        margin-right: 10px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log .WooZone-NAWS-import-status-success {
+        color: #2E7D32; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log .WooZone-NAWS-import-status-success .WooZone-NAWS-import-msg a {
+          background: #3f3976;
+          color: #fff;
+          border-radius: 2px;
+          padding: 4px;
+          cursor: pointer; }
+          #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log .WooZone-NAWS-import-status-success .WooZone-NAWS-import-msg a:hover {
+            background: #3a4481; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log .WooZone-NAWS-import-status-error {
+        color: #c62828; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-import-log-wrapper .WooZone-NAWS-import-log .WooZone-NAWS-import-status-start {
+        font-size: 13px; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-get-google-chrome {
+    text-align: center;
+    padding: 60px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-get-google-chrome h1 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 25px;
+      line-height: 25px;
+      margin-bottom: 10px;
+      padding-top: 15px;
+      padding-bottom: 25px;
+      display: block; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-get-google-chrome img {
+      width: 96px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-get-google-chrome a._is_btn {
+      background-color: #174ea6;
+      color: #fff;
+      font-size: 12px;
+      padding: 9px 20px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-get-google-chrome a._is_btn:hover {
+        background: #113979;
+        color: #fff; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-get-extension {
+    position: relative;
+    text-align: center;
+    font-weight: bold; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-get-extension .WooZone-NAWS-loader {
+      background: none;
+      position: relative;
+      display: inline-block; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-get-extension .WooZone-NAWS-loader .lds-roller {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-left: 0; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-get-extension .WooZone-NAWS-loader .lds-roller div:after {
+          background: #2675b9; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-get-extension .WooZone-NAWS-get-extension-block {
+      width: 320px;
+      display: inline-block;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      grid-gap: 20px;
+      margin: 0;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      text-align: left;
+      background: #F5F5F5;
+      border: 1px solid #E0E0E0;
+      padding: 10px;
+      border-radius: 4px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-get-extension .WooZone-NAWS-get-extension-block img {
+        width: 80px;
+        height: auto;
+        background: #fff;
+        border-radius: 4px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-get-extension .WooZone-NAWS-get-extension-block h4 {
+        margin-top: 5px;
+        font-size: 18px; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-get-extension .WooZone-NAWS-get-extension-block a._is_btn {
+        background-color: #174ea6;
+        color: #fff;
+        font-size: 12px;
+        padding: 9px 20px;
+        border-radius: 2px; }
+        #WooZone-NAWS-wrapper .WooZone-NAWS-get-extension .WooZone-NAWS-get-extension-block a._is_btn:hover {
+          background: #113979;
+          color: #fff; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-validate-left {
+    display: block;
+    width: 49%;
+    float: left; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-validate-left p {
+      font-size: 15px;
+      text-align: left; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-validate-left .WooZone-NAWS-info-block {
+      font-size: 14px;
+      background-color: #174ea6;
+      color: #fff;
+      border-radius: 2px;
+      padding: 5px 10px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-validate-left .WooZone-NAWS-info-text {
+      font-size: 12px;
+      color: #7b7b7b;
+      font-style: italic; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-validate-right {
+    overflow: hidden;
+    display: block;
+    float: right;
+    width: 49%; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-validate-right img {
+      width: 100%; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-validate-extension h2 {
+    margin-top: 0; }
+  #WooZone-NAWS-wrapper .WooZone-NAWS-validate-extension form {
+    width: 450px;
+    margin-top: 20px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-validate-extension form input {
+      width: 100%;
+      padding: 10px;
+      font-size: 13px;
+      margin-bottom: 10px; }
+    #WooZone-NAWS-wrapper .WooZone-NAWS-validate-extension form button {
+      margin-top: 0px;
+      width: 100%;
+      background: #305b9b;
+      border: none;
+      padding: 12px;
+      font-size: 13px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-transform: uppercase; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-validate-extension form button:hover {
+        background: #3e3d78; }
+      #WooZone-NAWS-wrapper .WooZone-NAWS-validate-extension form button span {
+        font-size: 20px;
+        color: #FDD835;
+        margin-right: 5px; }
+
+
+/*# sourceMappingURL=app.noaws_import.css.map*/

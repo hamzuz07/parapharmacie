@@ -1,0 +1,976 @@
+/**
+*
+* General plugin styles for the Smart Product represantation on your site.
+* Please add your CSS code in the end of the file instead of editing below code to avoid possible layout issues.
+*
+* Email support@topdevs.net for support.
+*
+*/
+
+/**
+ * 
+ * Table of contents
+ *
+ * - Slider Wrap
+ * - Loader
+ * - Preview Image
+ * - Slider Images
+ * - Mouse pointer
+ * - Fullscreen Mode
+ * - Navigation styles and colors
+ *    - Navbar position
+ *    - Icons
+ *    - Style sprites
+ *    - Icon Colors
+ *        - Dark Blue
+ *        - Light Blue
+ *        - Red
+ *        - Brown
+ *        - Purple
+ *        - Gray
+ *        - Yellow
+ *        - Green
+ *    - Scrollbar
+ *        - noUISlider
+ *        - Scrollbar Colors
+ *            - Dark Blue
+ *            - Light Blue
+ *            - Red
+ *            - Brown
+ *            - Purple
+ *            - Gray
+ *            - Yellow
+ *            - Green
+ * - Magnific Popup
+ * - WooCommerce
+ */
+
+
+/* Slider wrap */
+.threesixty-image {
+  position: relative;
+  overflow: hidden;
+  border: solid 1px #999;
+  margin: 2%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  max-width: 95%;
+  -moz-transition-property: none;
+  -webkit-transition-property: none;
+  -o-transition-property: none;
+  transition-property: none;
+}
+.threesixty-image.threesixty-no-border {
+  border: 0px;
+}
+.threesixty-image img {
+  display: block;
+  max-width: 100% !important;
+  width: 100%;
+  height: auto;
+}
+
+/* Loader */
+.threesixty-spinner {
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  top: calc(50% - 15px);
+  left: calc(50% - 30px);
+}
+.threesixty-spinner span {
+  font-family: Arial, "MS Trebuchet", sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  color: #FFF;
+  text-align: center;
+  line-height: 30px;
+  display: block;
+}
+
+/* Preview Image */
+.threesixty-preview-image {
+  opacity:0.4;
+  filter:alpha(opacity=40)
+}
+
+/* Slider Images*/
+.threesixty-images {
+  display: none;
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.threesixty-images li {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+.threesixty-images img {
+  border: 0px solid;
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+.threesixty-images .current-image {
+  visibility: visible;
+  width: 100%;
+}
+.threesixty-images .previous-image {
+  visibility: hidden;
+  width: 0;
+}
+
+/* Mouse pointer */
+.threesixty-hand-closed {
+  cursor: url(../images/hand_closed.png), auto;
+}
+.threesixty-hand-open {
+  cursor: url(../images/hand_open.png), auto;
+}
+
+
+/**
+ * Navigation styles and colors
+ * 
+ */
+
+/* Navbar position */
+.threesixty-nav-bar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+/* Icons */
+.threesixty-nav-bar a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  float: left;
+  background: url(../images/icons/32/1_holly_green.png) no-repeat;
+  text-indent: -99999px;
+  border: 0 solid !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Style sprites */
+.threesixty-glow .threesixty-nav-bar a,
+.threesixty-glow .threesixty-mfp-anchor,
+.threesixty-glow .mfp-close {
+  background: url(../images/icons/32/1_holly_green.png) no-repeat;
+}
+.threesixty-fancy .threesixty-nav-bar a,
+.threesixty-fancy .threesixty-mfp-anchor,
+.threesixty-fancy .mfp-close {
+  background: url(../images/icons/32/2_navy_round.png) no-repeat;
+}
+.threesixty-wave .threesixty-nav-bar a,
+.threesixty-wave .threesixty-mfp-anchor,
+.threesixty-wave .mfp-close {
+  background: url(../images/icons/32/3_round_yellow.png) no-repeat;
+}
+.threesixty-flat-round .threesixty-nav-bar a,
+.threesixty-flat-round .threesixty-mfp-anchor,
+.threesixty-flat-round .mfp-close {
+  background: url(../images/icons/32/4_flat_round.png) no-repeat;
+}
+.threesixty-flat-square .threesixty-nav-bar a,
+.threesixty-flat-square .threesixty-mfp-anchor,
+.threesixty-flat-square .mfp-close {
+  background: url(../images/icons/32/5_flat_square.png) no-repeat;
+}
+.threesixty-vintage .threesixty-nav-bar a,
+.threesixty-vintage .threesixty-mfp-anchor,
+.threesixty-vintage .mfp-close {
+  background: url(../images/icons/32/6_vintage.png) no-repeat;
+}
+.threesixty-arrows .threesixty-nav-bar a,
+.threesixty-arrows .threesixty-mfp-anchor,
+.threesixty-arrows .mfp-close {
+  background: url(../images/icons/32/7_just_arrows.png) no-repeat;
+}
+.threesixty-leather .threesixty-nav-bar a,
+.threesixty-leather .threesixty-mfp-anchor,
+.threesixty-leather .mfp-close {
+  background: url(../images/icons/32/8_leather.png) no-repeat;
+}
+
+/* Colors */
+
+/* Dark Blue */
+.threesixty-dark-blue .threesixty-nav-bar .threesixty-play {
+  background-position: 0 0;
+}
+.threesixty-dark-blue .threesixty-nav-bar .threesixty-stop {
+  background-position: 0 -32px;
+}
+.threesixty-dark-blue .threesixty-nav-bar .threesixty-next {
+  background-position: 0 -64px;
+}
+.threesixty-dark-blue .threesixty-nav-bar .threesixty-previous {
+  background-position: 0 -96px;
+}
+.threesixty-dark-blue .threesixty-mfp-anchor {
+  background-position: 0 -128px;
+}
+.threesixty-dark-blue .mfp-close {
+  background-position: 0 -160px;
+}
+
+/* Light Blue */
+.threesixty-light-blue .threesixty-nav-bar .threesixty-play {
+  background-position: -32px 0;
+}
+.threesixty-light-blue .threesixty-nav-bar .threesixty-stop {
+  background-position: -32px -32px;
+}
+.threesixty-light-blue .threesixty-nav-bar .threesixty-next {
+  background-position: -32px -64px;
+}
+.threesixty-light-blue .threesixty-nav-bar .threesixty-previous {
+  background-position: -32px -96px;
+}
+.threesixty-light-blue .threesixty-mfp-anchor {
+  background-position: -32px -128px;
+}
+.threesixty-light-blue .mfp-close {
+  background-position: -32px -160px;
+}
+
+/* Red */
+.threesixty-red .threesixty-nav-bar .threesixty-play {
+  background-position: -64px 0;
+}
+.threesixty-red .threesixty-nav-bar .threesixty-stop {
+  background-position: -64px -32px;
+}
+.threesixty-red .threesixty-nav-bar .threesixty-next {
+  background-position: -64px -64px;
+}
+.threesixty-red .threesixty-nav-bar .threesixty-previous {
+  background-position: -64px -96px;
+}
+.threesixty-red .threesixty-mfp-anchor {
+  background-position: -64px -128px;
+}
+.threesixty-red .mfp-close {
+  background-position: -64px -160px;
+}
+
+/* Brown */
+.threesixty-brown .threesixty-nav-bar .threesixty-play {
+  background-position: -96px 0;
+}
+.threesixty-brown .threesixty-nav-bar .threesixty-stop {
+  background-position: -96px -32px;
+}
+.threesixty-brown .threesixty-nav-bar .threesixty-next {
+  background-position: -96px -64px;
+}
+.threesixty-brown .threesixty-nav-bar .threesixty-previous {
+  background-position: -96px -96px;
+}
+.threesixty-brown .threesixty-mfp-anchor {
+  background-position: -96px -128px;
+}
+.threesixty-brown .mfp-close {
+  background-position: -96px -160px;
+}
+
+/* Purple */
+.threesixty-purple .threesixty-nav-bar .threesixty-play {
+  background-position: -128px 0;
+}
+.threesixty-purple .threesixty-nav-bar .threesixty-stop {
+  background-position: -128px -32px;
+}
+.threesixty-purple .threesixty-nav-bar .threesixty-next {
+  background-position: -128px -64px;
+}
+.threesixty-purple .threesixty-nav-bar .threesixty-previous {
+  background-position: -128px -96px;
+}
+.threesixty-purple .threesixty-mfp-anchor {
+  background-position: -128px -128px;
+}
+.threesixty-purple .mfp-close {
+  background-position: -128px -160px;
+}
+
+/* Gray */
+.threesixty-gray .threesixty-nav-bar .threesixty-play {
+  background-position: -160px 0;
+}
+.threesixty-gray .threesixty-nav-bar .threesixty-stop {
+  background-position: -160px -32px;
+}
+.threesixty-gray .threesixty-nav-bar .threesixty-next {
+  background-position: -160px -64px;
+}
+.threesixty-gray .threesixty-nav-bar .threesixty-previous {
+  background-position: -160px -96px;
+}
+.threesixty-gray .threesixty-mfp-anchor {
+  background-position: -160px -128px;
+}
+.threesixty-gray .mfp-close {
+  background-position: -160px -160px;
+}
+
+/* Yellow */
+.threesixty-yellow .threesixty-nav-bar .threesixty-play {
+  background-position: -192px 0;
+}
+.threesixty-yellow .threesixty-nav-bar .threesixty-stop {
+  background-position: -192px -32px;
+}
+.threesixty-yellow .threesixty-nav-bar .threesixty-next {
+  background-position: -192px -64px;
+}
+.threesixty-yellow .threesixty-nav-bar .threesixty-previous {
+  background-position: -192px -96px;
+}
+.threesixty-yellow .threesixty-mfp-anchor {
+  background-position: -192px -128px;
+}
+.threesixty-yellow .mfp-close {
+  background-position: -192px -160px;
+}
+
+/* Green */
+.threesixty-green .threesixty-nav-bar .threesixty-play {
+  background-position: -224px 0;
+}
+.threesixty-green .threesixty-nav-bar .threesixty-stop {
+  background-position: -224px -32px;
+}
+.threesixty-green .threesixty-nav-bar .threesixty-next {
+  background-position: -224px -64px;
+}
+.threesixty-green .threesixty-nav-bar .threesixty-previous {
+  background-position: -224px -96px;
+}
+.threesixty-green .threesixty-mfp-anchor {
+  background-position: -224px -128px;
+}
+.threesixty-green .mfp-close {
+  background-position: -224px -160px;
+}
+
+/* Scrollbar */
+.threesixty-scrollbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: auto;
+  right: auto;
+  width: 100%;
+}
+.threesixty-scrollbar-top .threesixty-scrollbar {
+  top: 0;
+  bottom: auto;
+  left: auto;
+  right: auto;
+}
+
+.threesixty-scrollbar-left .threesixty-scrollbar {
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: auto;
+  width: auto;
+}
+
+.threesixty-scrollbar-right .threesixty-scrollbar {
+  top: 0;
+  bottom: auto;
+  left: auto;
+  right: 0;
+  width: auto;
+}
+
+/*! nouislider - 14.6.4 - 3/18/2021 */
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+ .noUi-target,
+ .noUi-target * {
+   -webkit-touch-callout: none;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   -webkit-user-select: none;
+   -ms-touch-action: none;
+   touch-action: none;
+   -ms-user-select: none;
+   -moz-user-select: none;
+   user-select: none;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+ .noUi-target {
+   position: relative;
+ }
+ .noUi-base,
+ .noUi-connects {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   z-index: 1;
+ }
+ /* Wrapper for all connect elements.
+  */
+ .noUi-connects {
+   overflow: hidden;
+   z-index: 0;
+ }
+ .noUi-connect,
+ .noUi-origin {
+   will-change: transform;
+   position: absolute;
+   z-index: 1;
+   top: 0;
+   right: 0;
+   -ms-transform-origin: 0 0;
+   -webkit-transform-origin: 0 0;
+   -webkit-transform-style: preserve-3d;
+   transform-origin: 0 0;
+   transform-style: flat;
+ }
+ .noUi-connect {
+   height: 100%;
+   width: 100%;
+ }
+ .noUi-origin {
+   height: 10%;
+   width: 10%;
+ }
+ /* Offset direction
+  */
+ .noUi-txt-dir-rtl.noUi-horizontal .noUi-origin {
+   left: 0;
+   right: auto;
+ }
+ /* Give origins 0 height/width so they don't interfere with clicking the
+  * connect elements.
+  */
+ .noUi-vertical .noUi-origin {
+   width: 0;
+ }
+ .noUi-horizontal .noUi-origin {
+   height: 0;
+ }
+ .noUi-handle {
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   position: absolute;
+ }
+ .noUi-touch-area {
+   height: 100%;
+   width: 100%;
+ }
+ .noUi-state-tap .noUi-connect,
+ .noUi-state-tap .noUi-origin {
+   -webkit-transition: transform 0.3s;
+   transition: transform 0.3s;
+ }
+ .noUi-state-drag * {
+   cursor: inherit !important;
+ }
+ /* Slider size and handle placement;
+  */
+ .noUi-horizontal {
+   height: 18px;
+ }
+ .noUi-horizontal .noUi-handle {
+   width: 34px;
+   height: 28px;
+   right: -17px;
+   top: -6px;
+ }
+ .noUi-vertical {
+   width: 18px;
+ }
+ .noUi-vertical .noUi-handle {
+   width: 28px;
+   height: 34px;
+   right: -6px;
+   top: -17px;
+ }
+ .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
+   left: -17px;
+   right: auto;
+ }
+ /* Styling;
+  * Giving the connect element a border radius causes issues with using transform: scale
+  */
+ .noUi-target {
+   background: #FAFAFA;
+   border-radius: 4px;
+   border: 1px solid #D3D3D3;
+   box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+ }
+ .noUi-connects {
+   border-radius: 3px;
+ }
+ .noUi-connect {
+   background: #3FB8AF;
+ }
+ /* Handles and cursors;
+  */
+ .noUi-draggable {
+   cursor: ew-resize;
+ }
+ .noUi-vertical .noUi-draggable {
+   cursor: ns-resize;
+ }
+ .noUi-handle {
+   border: 1px solid #D9D9D9;
+   border-radius: 3px;
+   background: #FFF;
+   cursor: default;
+   box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+ }
+ .noUi-active {
+   box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+ }
+ /* Handle stripes;
+  */
+ .noUi-handle:before,
+ .noUi-handle:after {
+   content: "";
+   display: block;
+   position: absolute;
+   height: 14px;
+   width: 1px;
+   background: #E8E7E6;
+   left: 14px;
+   top: 6px;
+ }
+ .noUi-handle:after {
+   left: 17px;
+ }
+ .noUi-vertical .noUi-handle:before,
+ .noUi-vertical .noUi-handle:after {
+   width: 14px;
+   height: 1px;
+   left: 6px;
+   top: 14px;
+ }
+ .noUi-vertical .noUi-handle:after {
+   top: 17px;
+ }
+ /* Disabled state;
+  */
+ [disabled] .noUi-connect {
+   background: #B8B8B8;
+ }
+ [disabled].noUi-target,
+ [disabled].noUi-handle,
+ [disabled] .noUi-handle {
+   cursor: not-allowed;
+ }
+ /* Base;
+  *
+  */
+ .noUi-pips,
+ .noUi-pips * {
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+ .noUi-pips {
+   position: absolute;
+   color: #999;
+ }
+ /* Values;
+  *
+  */
+ .noUi-value {
+   position: absolute;
+   white-space: nowrap;
+   text-align: center;
+ }
+ .noUi-value-sub {
+   color: #ccc;
+   font-size: 10px;
+ }
+ /* Markings;
+  *
+  */
+ .noUi-marker {
+   position: absolute;
+   background: #CCC;
+ }
+ .noUi-marker-sub {
+   background: #AAA;
+ }
+ .noUi-marker-large {
+   background: #AAA;
+ }
+ /* Horizontal layout;
+  *
+  */
+ .noUi-pips-horizontal {
+   padding: 10px 0;
+   height: 80px;
+   top: 100%;
+   left: 0;
+   width: 100%;
+ }
+ .noUi-value-horizontal {
+   -webkit-transform: translate(-50%, 50%);
+   transform: translate(-50%, 50%);
+ }
+ .noUi-rtl .noUi-value-horizontal {
+   -webkit-transform: translate(50%, 50%);
+   transform: translate(50%, 50%);
+ }
+ .noUi-marker-horizontal.noUi-marker {
+   margin-left: -1px;
+   width: 2px;
+   height: 5px;
+ }
+ .noUi-marker-horizontal.noUi-marker-sub {
+   height: 10px;
+ }
+ .noUi-marker-horizontal.noUi-marker-large {
+   height: 15px;
+ }
+ /* Vertical layout;
+  *
+  */
+ .noUi-pips-vertical {
+   padding: 0 10px;
+   height: 100%;
+   top: 0;
+   left: 100%;
+ }
+ .noUi-value-vertical {
+   -webkit-transform: translate(0, -50%);
+   transform: translate(0, -50%);
+   padding-left: 25px;
+ }
+ .noUi-rtl .noUi-value-vertical {
+   -webkit-transform: translate(0, 50%);
+   transform: translate(0, 50%);
+ }
+ .noUi-marker-vertical.noUi-marker {
+   width: 5px;
+   height: 2px;
+   margin-top: -1px;
+ }
+ .noUi-marker-vertical.noUi-marker-sub {
+   width: 10px;
+ }
+ .noUi-marker-vertical.noUi-marker-large {
+   width: 15px;
+ }
+ .noUi-tooltip {
+   display: block;
+   position: absolute;
+   border: 1px solid #D9D9D9;
+   border-radius: 3px;
+   background: #fff;
+   color: #000;
+   padding: 5px;
+   text-align: center;
+   white-space: nowrap;
+ }
+ .noUi-horizontal .noUi-tooltip {
+   -webkit-transform: translate(-50%, 0);
+   transform: translate(-50%, 0);
+   left: 50%;
+   bottom: 120%;
+ }
+ .noUi-vertical .noUi-tooltip {
+   -webkit-transform: translate(0, -50%);
+   transform: translate(0, -50%);
+   top: 50%;
+   right: 120%;
+ }
+ .noUi-horizontal .noUi-origin > .noUi-tooltip {
+   -webkit-transform: translate(50%, 0);
+   transform: translate(50%, 0);
+   left: auto;
+   bottom: 10px;
+ }
+ .noUi-vertical .noUi-origin > .noUi-tooltip {
+   -webkit-transform: translate(0, -18px);
+   transform: translate(0, -18px);
+   top: auto;
+   right: 28px;
+ }
+
+/* Scrollbar Styles */
+.threesixty-scrollbar .noUi-target {
+  margin: 8px 20px;
+}
+.threesixty-scrollbar .noUi-target.noUi-vertical {
+  margin: 20px 10px;
+}
+.threesixty-scrollbar .noUi-handle {
+  outline: none;
+} 
+.threesixty-scrollbar .noUi-horizontal .noUi-handle {
+  height: 24px;
+} 
+.threesixty-scrollbar .noUi-handle:before,.threesixty-scrollbar .noUi-handle:after {
+  height: 10px;
+}
+.threesixty-scrollbar .noUi-horizontal {
+  height: 14px;
+}
+.threesixty-scrollbar .noUi-vertical {
+  width: 14px;
+}
+.threesixty-scrollbar .noUi-vertical .noUi-handle {
+  width: 24px;
+}
+.threesixty-scrollbar .noUi-handle:before,.threesixty-scrollbar .noUi-handle:after {
+  width: 10px;
+  height: 1px;
+}
+
+/* Dark blue */
+.threesixty-dark-blue .noUi-target {
+  border: 1px solid #0C4063;
+}
+.threesixty-dark-blue .noUi-target .noUi-base {
+  background: #2980b9;
+  box-shadow: inset 0px 1px 7px #115785
+}
+.threesixty-dark-blue .noUi-target .noUi-connect {
+  background: #3FACF5;
+  box-shadow: inset 0px 1px 7px #115785
+}
+.threesixty-dark-blue .noUi-target .noUi-handle {
+  border: 1px solid #006E8E;
+  background: #38AFFF;
+  box-shadow: inset 0px 1px 7px #115785
+}
+.threesixty-dark-blue .noUi-handle:before, 
+.threesixty-dark-blue .noUi-handle:after {
+  background: #0C4063;
+}
+
+/* Light blue */
+.threesixty-light-blue .noUi-target {
+  border: 1px solid #0c5b63;
+}
+.threesixty-light-blue .noUi-target .noUi-base {
+  background: #29adb9;
+  box-shadow: inset 0px 1px 7px #117b85
+}
+.threesixty-light-blue .noUi-target .noUi-connect {
+  background: #3fe5f5;
+  box-shadow: inset 0px 1px 7px #117b85
+}
+.threesixty-light-blue .noUi-target .noUi-handle {
+  border: 1px solid #008e80;
+  background: #38edff;
+  box-shadow: inset 0px 1px 7px #117b85
+}
+.threesixty-light-blue .noUi-handle:before, 
+.threesixty-light-blue .noUi-handle:after {
+  background: #0c5b63;
+}
+
+/* Red */
+.threesixty-red .noUi-target {
+  border: 1px solid #aa0808;
+}
+.threesixty-red .noUi-target .noUi-base {
+  background: #d91111;
+  box-shadow: inset 0px 1px 7px #c33535
+}
+.threesixty-red .noUi-target .noUi-connect {
+  background: #ff4444;
+  box-shadow: inset 0px 1px 7px #c33535
+}
+.threesixty-red .noUi-target .noUi-handle {
+  border: 1px solid #8a0000;
+  background: #ff1c1c;
+  box-shadow: inset 0px 1px 7px #c33535
+}
+.threesixty-red .noUi-handle:before, 
+.threesixty-red .noUi-handle:after {
+  background: #aa0808;
+}
+
+/* Brown */
+.threesixty-brown .noUi-target {
+  border: 1px solid #631c0c;
+}
+.threesixty-brown .noUi-target .noUi-base {
+  background: #b94329;
+  box-shadow: inset 0px 1px 7px #852611
+}
+.threesixty-brown .noUi-target .noUi-connect {
+  background: #f5603f;
+  box-shadow: inset 0px 1px 7px #852611
+}
+.threesixty-brown .noUi-target .noUi-handle {
+  border: 1px solid #813a01;
+  background: #cb692e;
+  box-shadow: inset 0px 1px 7px #852611
+}
+.threesixty-brown .noUi-handle:before, 
+.threesixty-brown .noUi-handle:after {
+  background: #631c0c;
+}
+
+/* Purple */
+.threesixty-purple .noUi-target {
+  border: 1px solid #630c48;
+}
+.threesixty-purple .noUi-target .noUi-base {
+  background: #b9298e;
+  box-shadow: inset 0px 1px 7px #851162
+}
+.threesixty-purple .noUi-target .noUi-connect {
+  background: #f53fbe;
+  box-shadow: inset 0px 1px 7px #851162
+}
+.threesixty-purple .noUi-target .noUi-handle {
+  border: 1px solid #8e007c;
+  background: #ff38c2;
+  box-shadow: inset 0px 1px 7px #851162
+}
+.threesixty-purple .noUi-handle:before, 
+.threesixty-purple .noUi-handle:after {
+  background: #630c48;
+}
+
+/* Gray */
+.threesixty-gray .noUi-target {
+  border: 1px solid #908d84;
+}
+.threesixty-gray .noUi-target .noUi-base {
+  background: #b2a98f;
+  box-shadow: inset 0px 1px 7px #b6b4a8
+}
+.threesixty-gray .noUi-target .noUi-connect {
+  background: #d9d7cb;
+  box-shadow: inset 0px 1px 7px #b6b4a8
+}
+.threesixty-gray .noUi-target .noUi-handle {
+  border: 1px solid #99968f;
+  background: #efefe7;
+  box-shadow: inset 0px 1px 7px #b6b4a8
+}
+.threesixty-gray .noUi-handle:before, 
+.threesixty-gray .noUi-handle:after {
+  background: #908d84;
+}
+
+/* Yellow */
+.threesixty-yellow .noUi-target {
+  border: 1px solid #6a6704;
+}
+.threesixty-yellow .noUi-target .noUi-base {
+  background: #c5be1c;
+  box-shadow: inset 0px 1px 7px #8f8a07
+}
+.threesixty-yellow .noUi-target .noUi-connect {
+  background: #fff835;
+  box-shadow: inset 0px 1px 7px #8f8a07
+}
+.threesixty-yellow .noUi-target .noUi-handle {
+  border: 1px solid #8e7000;
+  background: #fff938;
+  box-shadow: inset 0px 1px 7px #8f8a07
+}
+.threesixty-yellow .noUi-handle:before, 
+.threesixty-yellow .noUi-handle:after {
+  background: #6a6704;
+}
+
+/* Green */
+.threesixty-green .noUi-target {
+  border: 1px solid #046a0f;
+}
+.threesixty-green .noUi-target .noUi-base {
+  background: #1cc52d;
+  box-shadow: inset 0px 1px 7px #078f14
+}
+.threesixty-green .noUi-target .noUi-connect {
+  background: #35ff4a;
+  box-shadow: inset 0px 1px 7px #078f14
+}
+.threesixty-green .noUi-target .noUi-handle  {
+  border: 1px solid #0b8e00;
+  background: #38ff4d;
+  box-shadow: inset 0px 1px 7px #078f14
+}
+.threesixty-green .noUi-handle:before, 
+.threesixty-green .noUi-handle:after {
+  background: #046a0f;
+}
+
+/* Magnific Popup */
+.mfp-content .threesixty-image {
+  position: relative;
+  background: #FFF;
+  margin: 20px auto;
+}
+.threesixty-image.mfp-hide {
+  display: block !important;
+}
+.threesixty-image .threesixty-mfp-anchor,
+.threesixty-image .mfp-close {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  top: auto;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  opacity: 1;
+  margin: 0;
+}
+.threesixty-image .mfp-close:active {
+  top: auto;
+}
+.mfp-content .threesixty-mfp-anchor,
+.threesixty-loading .threesixty-mfp-anchor {
+  display: none;
+}
+.threesixty-scrollbar-bottom .threesixty-mfp-anchor,
+.threesixty-scrollbar-bottom .mfp-close,
+.threesixty-scrollbar-bottom .mfp-close:active {
+  bottom: auto;
+  top: 10px;
+}
+
+/* Added since WooCommerce 3.0 */
+.woocommerce-product-gallery .threesixty-image {
+  margin: 0px;
+  max-width: 100%;
+  /*float: left;*/
+}
+
+/* Beaver Builder Fix */
+.woocommerce div.product .fl-html div.images {
+    width: auto;
+}
+
+/* Add your code below this line */

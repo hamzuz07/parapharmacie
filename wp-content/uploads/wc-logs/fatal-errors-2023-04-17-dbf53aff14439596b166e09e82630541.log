@@ -1,0 +1,24 @@
+2023-04-17T23:30:52+00:00 CRITICAL Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in C:\laragon\www\wordpress\wp-content\plugins\woozone\modules\synchronization\init.php:789
+Stack trace:
+#0 C:\laragon\www\wordpress\wp-content\plugins\woozone\modules\synchronization\init.php(789): max(Array)
+#1 C:\laragon\www\wordpress\wp-content\plugins\woozone\modules\cronjobs\cronjobs.core.php(189): wwcAmazonSyncronize->cron_small_bulk(Array, 'return')
+#2 C:\laragon\www\wordpress\wp-content\plugins\woozone\modules\cronjobs\cronjobs.core.php(307): WooZoneCronjobs->run_core('sync_products', Array)
+#3 C:\laragon\www\wordpress\wp-includes\class-wp-hook.php(308): WooZoneCronjobs->run('sync_products')
+#4 C:\laragon\www\wordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#5 C:\laragon\www\wordpress\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#6 C:\laragon\www\wordpress\wp-cron.php(188): do_action_ref_array('WooZone_sync_pr...', Array)
+#7 {main}
+  thrown في C:\laragon\www\wordpress\wp-content\plugins\woozone\modules\synchronization\init.php في السطر 789
+
+2023-04-17T23:40:47+00:00 CRITICAL Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in C:\laragon\www\wordpress\wp-content\plugins\woozone\modules\synchronization\init.php:789
+Stack trace:
+#0 C:\laragon\www\wordpress\wp-content\plugins\woozone\modules\synchronization\init.php(789): max(Array)
+#1 C:\laragon\www\wordpress\wp-content\plugins\woozone\modules\cronjobs\cronjobs.core.php(189): wwcAmazonSyncronize->cron_small_bulk(Array, 'return')
+#2 C:\laragon\www\wordpress\wp-content\plugins\woozone\modules\cronjobs\cronjobs.core.php(307): WooZoneCronjobs->run_core('sync_products', Array)
+#3 C:\laragon\www\wordpress\wp-includes\class-wp-hook.php(308): WooZoneCronjobs->run('sync_products')
+#4 C:\laragon\www\wordpress\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#5 C:\laragon\www\wordpress\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#6 C:\laragon\www\wordpress\wp-cron.php(188): do_action_ref_array('WooZone_sync_pr...', Array)
+#7 {main}
+  thrown في C:\laragon\www\wordpress\wp-content\plugins\woozone\modules\synchronization\init.php في السطر 789
+

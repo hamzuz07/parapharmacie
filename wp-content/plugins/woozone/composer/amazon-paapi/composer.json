@@ -1,0 +1,18 @@
+{
+    "name": "woozone/amazon-paapi",
+    "license": "MIT",
+    "description": "WZone Implementation using Amazon Product Advertising API",
+    "keywords": ["amazon", "product advertising api"],
+    "type": "library",
+    "authors": [],
+    "require": {
+        "php": ">=5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "WooZone\\AmazonPaapi\\": ["src/"]
+        },
+        "files": [],
+        "exclude-from-classmap": []
+    }
+}

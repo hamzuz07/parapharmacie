@@ -1,0 +1,406 @@
+/* adding custom product info on the edit product page */
+.wp-core-ui .woocommerce_variations .woocommerce_variation .WooZone_asin {
+	margin-top: 8px;
+}
+	.wp-core-ui .woocommerce_variations .woocommerce_variation .WooZone_asin a {
+		margin-left: 10px;
+		vertical-align: bottom;
+	}
+.wp-core-ui .WooZone_asin_field a.button.button-primary {
+	display: inline-block;
+	margin-left: 7px;
+}
+
+/* adding custom product info on the product listing page */
+th#WooZone_product_info {
+	width: 170px; 
+}
+	td.WooZone_product_info .WooZoneWoocustomFields img,
+	td.WooZone_product_info .WooZoneWoocustomFields span,
+	td.WooZone_product_info .WooZoneWoocustomFields a {
+		display: inline-block;
+	}
+	td.WooZone_product_info .WooZoneWoocustomFields img {
+		margin: 0px;
+	}
+	td.WooZone_product_info .WooZoneWoocustomFields a {
+		margin-left: 4px;
+	}
+	td.WooZone_product_info .WooZoneWoocustomFields span:first-of-type {
+		color: green;
+		font-weight: bold;
+		font-size: 14px;
+	}
+	td.WooZone_product_info .WooZoneWoocustomFields span:last-of-type {
+		margin-left: 1px;
+	}
+	
+
+/* woocommerce fix thumb for remote images with https - on product listing page - admin product listing wp-admin/edit.php?post_type=product */
+table.wp-list-table .column-thumb_woozone {
+	width: 52px;
+	text-align: center;
+	white-space: nowrap;
+}
+	table.wp-list-table td.column-thumb_woozone img {
+		margin: 0;
+		width: auto;
+		height: auto;
+		max-width: 40px;
+		max-height: 40px;
+		vertical-align: middle;
+	}
+
+table.wp-list-table .column-price_woozone {
+	width: 15rem;
+}
+
+
+
+
+/***********************************************/
+/* ADMIN ORDER DETAILS PAGE
+/***********************************************/
+
+/* Country Flags */
+.WooZone-country-check li .WooZone-cc_domain:before,
+.WooZone-country-check-small .WooZone-cc_domain:before,
+.WooZone-cart-checkout .WooZone-cc_domain:before {
+	display: inline-block;
+	margin-right: 11px;
+	width: 16px;
+}
+.WooZone-country-check-small .WooZone-cc_domain:before {
+	margin-right: 4px;
+}
+
+.WooZone-country-check li .WooZone-cc_domain.com:before,
+.WooZone-country-check-small .WooZone-cc_domain.com:before,
+.WooZone-cart-checkout .WooZone-cc_domain.com:before {
+	content: url(flags/us.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.co-uk:before,
+.WooZone-country-check-small .WooZone-cc_domain.co-uk:before,
+.WooZone-cart-checkout .WooZone-cc_domain.co-uk:before {
+	content: url(flags/uk.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.de:before,
+.WooZone-country-check-small .WooZone-cc_domain.de:before,
+.WooZone-cart-checkout .WooZone-cc_domain.de:before {
+	content: url(flags/de.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.fr:before,
+.WooZone-country-check-small span .WooZone-cc_domain.fr:before,
+.WooZone-cart-checkout .WooZone-cc_domain.fr:before {
+	content: url(flags/fr.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.co-jp:before,
+.WooZone-country-check-small .WooZone-cc_domain.co-jp:before,
+.WooZone-cart-checkout .WooZone-cc_domain.co-jp:before {
+	content: url(flags/jp.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.ca:before,
+.WooZone-country-check-small .WooZone-cc_domain.ca:before,
+.WooZone-cart-checkout .WooZone-cc_domain.ca:before {
+	content: url(flags/ca.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.cn:before,
+.WooZone-country-check-small .WooZone-cc_domain.cn:before,
+.WooZone-cart-checkout .WooZone-cc_domain.cn:before {
+	content: url(flags/cn.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.in:before,
+.WooZone-country-check-small .WooZone-cc_domain.in:before,
+.WooZone-cart-checkout .WooZone-cc_domain.in:before {
+	content: url(flags/in.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.it:before,
+.WooZone-country-check-small .WooZone-cc_domain.it:before,
+.WooZone-cart-checkout .WooZone-cc_domain.it:before {
+	content: url(flags/it.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.es:before,
+.WooZone-country-check-small .WooZone-cc_domain.es:before,
+.WooZone-cart-checkout .WooZone-cc_domain.es:before {
+	content: url(flags/es.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.com-mx:before,
+.WooZone-country-check-small .WooZone-cc_domain.com-mx:before,
+.WooZone-cart-checkout .WooZone-cc_domain.com-mx:before {
+	content: url(flags/mx.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.com-br:before,
+.WooZone-country-check-small .WooZone-cc_domain.com-br:before,
+.WooZone-cart-checkout .WooZone-cc_domain.com-br:before {
+	content: url(flags/br.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.com-au:before,
+.WooZone-country-check-small .WooZone-cc_domain.com-au:before,
+.WooZone-cart-checkout .WooZone-cc_domain.com-au:before {
+	content: url(flags/au.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.ae:before,
+.WooZone-country-check-small .WooZone-cc_domain.ae:before,
+.WooZone-cart-checkout .WooZone-cc_domain.ae:before {
+	content: url(flags/ae.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.nl:before,
+.WooZone-country-check-small .WooZone-cc_domain.nl:before,
+.WooZone-cart-checkout .WooZone-cc_domain.nl:before {
+	content: url(flags/nl.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.sg:before,
+.WooZone-country-check-small .WooZone-cc_domain.sg:before,
+.WooZone-cart-checkout .WooZone-cc_domain.sg:before {
+	content: url(flags/sg.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.sa:before,
+.WooZone-country-check-small .WooZone-cc_domain.sa:before,
+.WooZone-cart-checkout .WooZone-cc_domain.sa:before {
+	content: url(flags/sa.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.com-tr:before,
+.WooZone-country-check-small .WooZone-cc_domain.com-tr:before,
+.WooZone-cart-checkout .WooZone-cc_domain.com-tr:before {
+	content: url(flags/tr.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.se:before,
+.WooZone-country-check-small .WooZone-cc_domain.se:before,
+.WooZone-cart-checkout .WooZone-cc_domain.se:before {
+	content: url(flags/se.png);
+}
+
+.WooZone-country-check li .WooZone-cc_domain.pl:before,
+.WooZone-country-check-small .WooZone-cc_domain.pl:before,
+.WooZone-cart-checkout .WooZone-cc_domain.pl:before {
+	content: url(flags/pl.png);
+}
+
+/* From Cart page - box amazon shops */
+.WooZone-cart-checkout {
+	border: 1px solid #e0dede;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	overflow: hidden;
+	padding: 19px 29px;
+	position: relative;
+}
+	.WooZone-cart-checkout .WooZone-cc_status,
+	.WooZone-cart-checkout .WooZone-cart-msg {
+		font-size: 14px;
+		color: #747474;
+	}
+	.WooZone-cart-checkout .WooZone-cc_status.success,
+	.WooZone-cart-checkout .WooZone-cart-msg .success {
+		color: #2ecc71;
+		font-weight:bold;
+		background-image: url(images/available-yes.png);
+		background-position: 95% 50%;
+		background-repeat:no-repeat;
+		padding-right:30px;
+	}
+	.WooZone-cart-checkout .WooZone-cc_status.cancel,
+	.WooZone-cart-checkout .WooZone-cart-msg .cancel {
+		color: #e74c3c;
+	}
+	.WooZone-cart-checkout ul.WooZone-cart-shops {
+		margin: 0px;
+	}
+		.WooZone-cart-checkout ul.WooZone-cart-shops li {
+			color: #747474;
+			display: block;
+			font-size: 15px;
+			line-height: 55px;
+			list-style-type: none;
+			min-width: 280px;
+		}
+			.WooZone-cart-checkout ul.WooZone-cart-shops li form {
+				display: inline-block;
+			}
+			.WooZone-cart-checkout .WooZone-button {
+				background: #232f3e none repeat scroll 0 0;
+				border: 0 none;
+				border-radius: 0.5rem;
+				color: #fff;
+				font-size: 1.4rem;
+				font-weight: 500;
+				padding: 6px 12px 6px 36px !important;
+				text-decoration: none;
+				text-transform: none;
+				margin:0 10px 0 30px;
+				background-image: url(images/16.png);
+				background-repeat:no-repeat;
+				background-position:5% 50%;
+				cursor:pointer;
+			}
+		
+			.WooZone-cart-checkout .WooZone-button:hover {
+				background: #EF6C00 none repeat scroll 0 0;
+				background-image: url(images/16.png);
+				background-repeat:no-repeat;
+				background-position:5% 50%;
+			}
+			.WooZone-cart-checkout .WooZone-button.cancel {
+				background: #b181a7 none repeat scroll 0 0;
+				padding: 5px 20px 5px 20px !important;
+				margin:0 10px 0 0px;
+			}
+			.WooZone-cart-checkout .WooZone-button.cancel:hover {
+				background: #d3aaca none repeat scroll 0 0;
+			}
+
+.WooZone-cart-checkout .WooZone-cart-fakeform {
+	display: inline-block;
+}
+
+
+.WooZone-order-lineitems {
+}
+	.WooZone-order-lineitem {
+		display: block;
+		margin-top: .5em;
+		font-size: .92em!important;
+		color: #888;
+	}
+		.WooZone-order-lineitem > div {
+			display: inline-block;
+			margin-right: 25px;
+			vertical-align: top;
+		}
+		.WooZone-order-lineitem > div.asin,
+		.WooZone-order-lineitem > div.parentasin {
+		}
+
+.WooZone-cart-checkout .WooZone-cc_order_totals {
+	display: inline-block;
+}
+.WooZone-cart-checkout .WooZone-dp-pricebox {
+	display: inline-block;
+	vertical-align: top;
+}
+.WooZone-cart-checkout .WooZone-cart-order-gtotal {
+	text-align: right;
+}
+
+.WooZone-order-lineitems .WooZone_finalprice_field,
+.WooZone-cart-checkout .WooZone_finalprice_field {
+	padding: 0px !important;
+	background-color: transparent;
+	line-height: inherit;
+	margin: 0px;
+}
+	.WooZone-order-lineitems .WooZone_finalprice_field label,
+	.WooZone-cart-checkout .WooZone_finalprice_field label {
+		float: none;
+		width: auto;
+		margin: 0px;
+		display: inline-block;
+		margin-right: 0px;
+		vertical-align: top;
+		font-weight: bold;
+		font-size: 14px;
+		color: #404040;
+	}
+	.WooZone-order-lineitems .WooZone_finalprice_field .WooZone-dp-pricebox-price,
+	.WooZone-cart-checkout .WooZone_finalprice_field .WooZone-dp-pricebox-price {
+		display: inline-block;
+	}
+
+#woocommerce-order-items .wc-order-totals .refunded-total.WooZone-dptax-profit {
+	color: #4caf50;
+	font-weight: bold;
+}
+
+.WooZone-order-amzprods > h2 select {
+	margin-left: 10px;
+}
+
+.WooZone-marker-order-hasamazon {
+	background: #232f3e;
+	color: #fff;
+	margin-right: 10px;
+	border-radius: 4px;
+	padding: 5px 10px 6px 30px;
+	display: inline-block;
+	border: 1px solid #f6f6f6;
+	position: relative;
+	font-size: 13px;
+	text-shadow: none;
+	line-height: 16px;
+	height: 16px;
+}
+	.WooZone-marker-order-hasamazon img {
+		position: absolute;
+		top: 5px;
+		left: 10px;
+		margin: 0px !important;
+	}
+.WooZone-marker-order-hasdptax {
+	background: #232f3e;
+}
+
+h2.woocommerce-order-data__heading .WooZone-marker-order-hasamazon {
+	vertical-align: top;
+	height: 16px;
+}
+
+.WooZone-marker-order-amzstatus {
+	background: #ECEFF1;
+	color: #263238;
+	display: inline-flex;
+	line-height: 2.5em;
+	border-radius: 4px;
+	border-bottom: 1px solid rgba(0,0,0,.05);
+	margin: -.25em 0;
+	margin-right: 10px;
+	cursor: inherit !important;
+	white-space: nowrap;
+	max-width: 100%;
+	word-wrap: break-word;
+	text-decoration: none;
+}
+.WooZone-marker-order-amzstatus.new {
+	background: #ECEFF1;
+	color: #263238;
+}
+.WooZone-marker-order-amzstatus.processing {
+	background: #B0BEC5;
+	color: #263238;
+}
+.WooZone-marker-order-amzstatus.completed {
+	background: #388E3C;
+	color: #FAFAFA;
+}
+.WooZone-marker-order-amzstatus.error {
+	background: #d32f2f;
+	color: #FAFAFA;
+}
+	.WooZone-marker-order-amzstatus span {
+		margin: 0 1em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+
+.fa-lg.fa-external-link {
+	font-size: 14px;
+	color: #263238;
+}

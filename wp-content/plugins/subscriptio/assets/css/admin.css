@@ -1,0 +1,417 @@
+/**
+ * Admin styles
+ */
+/**
+ * =====================================================================================================================
+ * ALL POST TYPES
+ * =====================================================================================================================
+ */
+.post-type-rp_sub_subscription,
+.post-type-rp_sub_log_entry {
+  /* Overriding some weird WordPress rule */
+}
+.post-type-rp_sub_subscription .tablenav input, .post-type-rp_sub_subscription .tablenav select,
+.post-type-rp_sub_log_entry .tablenav input,
+.post-type-rp_sub_log_entry .tablenav select {
+  line-height: 1;
+  height: 32px;
+}
+.post-type-rp_sub_subscription .wp-list-table,
+.post-type-rp_sub_log_entry .wp-list-table {
+  margin-top: 1em;
+}
+.post-type-rp_sub_subscription .wp-list-table td, .post-type-rp_sub_subscription .wp-list-table th,
+.post-type-rp_sub_log_entry .wp-list-table td,
+.post-type-rp_sub_log_entry .wp-list-table th {
+  vertical-align: middle;
+}
+.post-type-rp_sub_subscription .wp-list-table thead th,
+.post-type-rp_sub_subscription .wp-list-table tfoot th,
+.post-type-rp_sub_log_entry .wp-list-table thead th,
+.post-type-rp_sub_log_entry .wp-list-table tfoot th {
+  padding: 0.75em 1em;
+}
+.post-type-rp_sub_subscription .wp-list-table tbody td, .post-type-rp_sub_subscription .wp-list-table tbody th,
+.post-type-rp_sub_log_entry .wp-list-table tbody td,
+.post-type-rp_sub_log_entry .wp-list-table tbody th {
+  padding: 1em;
+  line-height: 26px;
+}
+.post-type-rp_sub_subscription .wp-list-table .check-column,
+.post-type-rp_sub_log_entry .wp-list-table .check-column {
+  width: 1px;
+  white-space: nowrap;
+  padding: 1em 1em 1em 1em !important;
+  vertical-align: middle;
+}
+.post-type-rp_sub_subscription .wp-list-table .check-column input,
+.post-type-rp_sub_log_entry .wp-list-table .check-column input {
+  vertical-align: text-top;
+  margin: 1px 0;
+}
+.post-type-rp_sub_subscription .rp-sub-meta-box-empty,
+.post-type-rp_sub_log_entry .rp-sub-meta-box-empty {
+  margin: 10px;
+  padding: 0;
+}
+.post-type-rp_sub_subscription .postbox .inside > p.rp-sub-meta-box-empty:last-child,
+.post-type-rp_sub_log_entry .postbox .inside > p.rp-sub-meta-box-empty:last-child {
+  margin-bottom: 10px !important;
+}
+
+/**
+ * =====================================================================================================================
+ * SUBSCRIPTION & SUBORDER
+ * =====================================================================================================================
+ */
+.post-type-rp_sub_subscription {
+  /* Hide some order related elements that are not used for subscriptions */
+}
+.post-type-rp_sub_subscription .wp-list-table .column-subscription {
+  width: 15ch;
+}
+.post-type-rp_sub_subscription .wp-list-table .column-products {
+  width: 25ch;
+}
+.post-type-rp_sub_subscription .wp-list-table .column-last_order {
+  width: 10ch;
+}
+.post-type-rp_sub_subscription .wp-list-table .column-first_payment {
+  width: 12ch;
+}
+.post-type-rp_sub_subscription .wp-list-table .column-scheduled_renewal_payment {
+  width: 12ch;
+}
+.post-type-rp_sub_subscription .wp-list-table .column-status {
+  width: 12ch;
+}
+.post-type-rp_sub_subscription .wp-list-table .column-recurring_total {
+  width: 12ch;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-subscription-data .inside {
+  margin: 0;
+  padding: 0;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-subscription-data .inside .order_data_column:first-of-type {
+  padding-bottom: 20px;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-subscription-data .handlediv,
+.post-type-rp_sub_subscription #rp-sub-subscription-subscription-data .hndle {
+  display: none;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-subscription-data .rp-sub-subscription-payment-gateway label a {
+  float: right;
+  margin-left: 8px;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-related-orders .inside {
+  margin: 0;
+  padding: 0;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-related-orders .wp-list-table {
+  margin: 0 !important;
+  border: 0 !important;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-related-orders .wp-list-table .column-related_order {
+  width: 35%;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .inside {
+  margin: 0;
+  padding: 0;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-subscription-billing-cycle,
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-subscription-lifespan {
+  padding: 10px 10px 15px 10px;
+  border-bottom: 1px solid #eee;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-subscription-billing-cycle label,
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-subscription-lifespan label {
+  display: block;
+  padding: 0 0 3px;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-subscription-billing-cycle input,
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-subscription-lifespan input {
+  float: left;
+  width: 55%;
+  min-width: 50px;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-subscription-billing-cycle select,
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-subscription-lifespan select {
+  float: left;
+  width: 40%;
+  min-width: 50px;
+  margin-left: 0.5%;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-schedule-list {
+  margin: 12px 0;
+  padding: 2px 0 0;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-schedule-list .rp-sub-schedule-list-item {
+  padding: 0 10px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-schedule-list .rp-sub-schedule-list-item .rp-sub-schedule-list-item-content {
+  padding: 10px;
+  background: #e5e5e5;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-schedule-list .rp-sub-schedule-list-item-renewal-order .rp-sub-schedule-list-item-content,
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-schedule-list .rp-sub-schedule-list-item-renewal-payment .rp-sub-schedule-list-item-content,
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-schedule-list .rp-sub-schedule-list-item-resume .rp-sub-schedule-list-item-content {
+  background: #c6e1c6;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-schedule-list .rp-sub-schedule-list-item-payment-retry .rp-sub-schedule-list-item-content {
+  background: #f8dda7;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-schedule-list .rp-sub-schedule-list-item-suspend,
+.post-type-rp_sub_subscription #rp-sub-subscription-schedule .rp-sub-schedule-list .rp-sub-schedule-list-item-cancel {
+  background: #eba3a3;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside {
+  margin: 0;
+  padding: 0;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside .rp-sub-activity-log-view-all {
+  margin: 0;
+  padding: 6px 12px;
+  border-top: 1px solid #ddd;
+  text-align: right;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul {
+  margin: 12px 0;
+  padding: 2px 0 0;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li {
+  padding: 0 10px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li .rp-sub-activity-log-entry-content {
+  padding: 10px;
+  background: #e5e5e5;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li .rp-sub-activity-log-entry-content p {
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li .rp-sub-activity-log-entry-content .rp-sub-activity-log-entry-notes {
+  margin-top: 6px;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li .rp-sub-activity-log-entry-content .rp-sub-activity-log-entry-notes li {
+  margin: 0;
+  margin-top: 6px;
+  padding: 0;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li.rp-sub-activity-log-entry-success .rp-sub-activity-log-entry-content {
+  background: #c6e1c6;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li.rp-sub-activity-log-entry-warning .rp-sub-activity-log-entry-content, .post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li.rp-sub-activity-log-entry-failed .rp-sub-activity-log-entry-content {
+  background: #f8dda7;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li.rp-sub-activity-log-entry-error .rp-sub-activity-log-entry-content {
+  background: #eba3a3;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li .rp-sub-activity-log-entry-meta {
+  padding: 10px;
+  padding-bottom: 0;
+  color: #999;
+  margin: 0;
+  font-size: 11px;
+}
+.post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li .rp-sub-activity-log-entry-meta a, .post-type-rp_sub_subscription #rp-sub-subscription-activity-log .inside > ul > li .rp-sub-activity-log-entry-meta a:hover {
+  color: #999;
+}
+.post-type-rp_sub_subscription .rp_sub_subscription_validation_error {
+  background: #0085ba !important;
+  color: white !important;
+  border: none !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  max-width: 200px !important;
+}
+.post-type-rp_sub_subscription .rp_sub_subscription_validation_error .ui-tooltip-content {
+  position: relative !important;
+  padding: 1em !important;
+}
+.post-type-rp_sub_subscription .rp_sub_subscription_validation_error .ui-tooltip-content::after {
+  content: "" !important;
+  position: absolute !important;
+  border-style: solid !important;
+  display: block !important;
+  width: 0 !important;
+}
+.post-type-rp_sub_subscription .rp_sub_subscription_validation_error .ui-tooltip-content::after {
+  top: -10px !important;
+  left: 15px !important;
+  border-color: #0085ba transparent !important;
+  border-width: 0 10px 10px !important;
+}
+.post-type-rp_sub_subscription .add-items .button.refund-items {
+  display: none;
+}
+
+/**
+ * =====================================================================================================================
+ * LOG ENTRY
+ * =====================================================================================================================
+ */
+.post-type-rp_sub_log_entry .wp-list-table .column-created {
+  width: 14%;
+}
+.post-type-rp_sub_log_entry .wp-list-table .column-event_type {
+  width: 16%;
+}
+.post-type-rp_sub_log_entry .wp-list-table .column-status {
+  width: 15%;
+}
+.post-type-rp_sub_log_entry .wp-list-table .column-subscription {
+  width: 14%;
+}
+.post-type-rp_sub_log_entry .wp-list-table .column-order {
+  width: 11%;
+}
+.post-type-rp_sub_log_entry .wp-list-table .column-details {
+  width: 30%;
+}
+
+/**
+ * =====================================================================================================================
+ * GENERIC
+ * =====================================================================================================================
+ */
+.rp-sub-object-property-label {
+  display: inline-flex;
+  line-height: 2.5em;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  background: 0;
+  margin: -0.25em 0;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.rp-sub-object-property-label span {
+  margin: 0 1em;
+  overflow: hidden;
+  font-weight: 700;
+}
+
+.rp-sub-status-label {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  line-height: 2.5em;
+  border-radius: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin: -0.25em 0;
+  white-space: nowrap;
+  max-width: 100%;
+  background: #e5e5e5;
+  color: #777;
+}
+.rp-sub-status-label span {
+  margin: 0 1em;
+  overflow: hidden;
+}
+.rp-sub-status-label-trial, .rp-sub-status-label-trial:hover, .rp-sub-status-label-active, .rp-sub-status-label-active:hover, .rp-sub-status-label-success, .rp-sub-status-label-success:hover {
+  background: #c6e1c6;
+  color: #5b841b;
+}
+.rp-sub-status-label-paused, .rp-sub-status-label-paused:hover {
+  background: #c8d7e1;
+  color: #2e4453;
+}
+.rp-sub-status-label-warning, .rp-sub-status-label-warning:hover, .rp-sub-status-label-failed, .rp-sub-status-label-failed:hover {
+  background: #f8dda7;
+  color: #94660c;
+}
+.rp-sub-status-label-overdue, .rp-sub-status-label-overdue:hover, .rp-sub-status-label-suspended, .rp-sub-status-label-suspended:hover, .rp-sub-status-label-error, .rp-sub-status-label-error:hover {
+  background: #eba3a3;
+  color: #761919;
+}
+
+/**
+ * =====================================================================================================================
+ * WOOCOMMERCE PRODUCT PAGE
+ * =====================================================================================================================
+ */
+.rp_sub_subscription_product-flag {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.25em;
+  padding: 3px 6px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+}
+.wp-list-table .rp_sub_subscription_product-flag {
+  margin-bottom: 0.25em;
+}
+
+#woocommerce-product-data .show-if-rp_sub_subscription_product-simple .rp-sub-subscription-product-time-length {
+  float: left;
+  width: 33.5%;
+  min-width: 50px;
+}
+@media only screen and (max-width: 1280px) {
+  #woocommerce-product-data .show-if-rp_sub_subscription_product-simple .rp-sub-subscription-product-time-length {
+    width: 53.5%;
+  }
+}
+#woocommerce-product-data .show-if-rp_sub_subscription_product-simple .rp-sub-subscription-product-time-period {
+  float: left;
+  width: 16%;
+  min-width: 50px;
+  margin-left: 0.5%;
+}
+@media only screen and (max-width: 1280px) {
+  #woocommerce-product-data .show-if-rp_sub_subscription_product-simple .rp-sub-subscription-product-time-period {
+    width: 26%;
+  }
+}
+#woocommerce-product-data .show-if-rp_sub_subscription_product-variable {
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+}
+#woocommerce-product-data .show-if-rp_sub_subscription_product-variable label {
+  display: block;
+}
+#woocommerce-product-data .show-if-rp_sub_subscription_product-variable .rp-sub-subscription-product-time-length {
+  float: left;
+  width: 66% !important;
+  min-width: 50px;
+}
+#woocommerce-product-data .show-if-rp_sub_subscription_product-variable .rp-sub-subscription-product-time-period {
+  float: left;
+  width: 33.5% !important;
+  min-width: 50px;
+  margin-left: 0.5%;
+}
+
+.column-rightpress-product-list-shared-column {
+  width: 12ch;
+}
+
+/**
+ * =====================================================================================================================
+ * WOOCOMMERCE ORDER PAGE
+ * =====================================================================================================================
+ */
+#rp-sub-order-related-subscriptions .inside {
+  margin: 0;
+  padding: 0;
+}
+#rp-sub-order-related-subscriptions .inside .wp-list-table {
+  margin: 0 !important;
+  border: 0 !important;
+}
+#rp-sub-order-related-subscriptions .inside .wp-list-table td {
+  cursor: initial;
+}
+#rp-sub-order-related-subscriptions .inside .wp-list-table td:first-child {
+  padding-left: 1em;
+}
+#rp-sub-order-related-subscriptions .inside .wp-list-table .column-related_subscription_subscription {
+  width: 35%;
+}
+
+/*# sourceMappingURL=admin.css.map */

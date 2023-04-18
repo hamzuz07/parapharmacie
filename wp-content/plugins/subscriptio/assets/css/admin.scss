@@ -1,0 +1,542 @@
+/**
+ * Admin styles
+ */
+
+/**
+ * =====================================================================================================================
+ * ALL POST TYPES
+ * =====================================================================================================================
+ */
+
+.post-type-rp_sub_subscription,
+.post-type-rp_sub_log_entry {
+
+    .tablenav {
+
+        input, select {
+            line-height: 1;
+            height: 32px;
+        }
+    }
+
+    .wp-list-table {
+        margin-top: 1em;
+
+        td, th {
+            vertical-align: middle;
+        }
+
+        thead th,
+        tfoot th {
+            padding: 0.75em 1em;
+        }
+
+        tbody {
+
+            td, th {
+                padding: 1em;
+                line-height: 26px;
+            }
+        }
+
+        .check-column {
+            width: 1px;
+            white-space: nowrap;
+            padding: 1em 1em 1em 1em !important;
+            vertical-align: middle;
+
+            input {
+                vertical-align: text-top;
+                margin: 1px 0;
+            }
+
+        }
+    }
+
+    .rp-sub-meta-box-empty {
+        margin: 10px;
+        padding: 0;
+    }
+
+    /* Overriding some weird WordPress rule */
+    .postbox .inside>p.rp-sub-meta-box-empty:last-child {
+        margin-bottom: 10px!important;
+    }
+}
+
+/**
+ * =====================================================================================================================
+ * SUBSCRIPTION & SUBORDER
+ * =====================================================================================================================
+ */
+
+.post-type-rp_sub_subscription {
+
+    .wp-list-table {
+
+        .column-cb {
+
+        }
+
+        .column-subscription {
+            width: 15ch;
+        }
+
+        .column-products {
+            width: 25ch;
+        }
+
+        .column-last_order {
+            width: 10ch;
+        }
+
+        .column-first_payment {
+            width: 12ch;
+        }
+
+        .column-scheduled_renewal_payment {
+            width: 12ch;
+        }
+
+        .column-status {
+            width: 12ch;
+        }
+
+        .column-recurring_total {
+            width: 12ch;
+        }
+    }
+
+    #rp-sub-subscription-subscription-data {
+
+        .inside {
+            margin: 0;
+            padding: 0;
+
+            .order_data_column:first-of-type {
+                padding-bottom: 20px;
+            }
+        }
+
+        .handlediv,
+        .hndle {
+            display: none;
+        }
+
+        .rp-sub-subscription-payment-gateway {
+
+            label a {
+                float: right;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    #rp-sub-subscription-related-orders {
+
+        .inside {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wp-list-table {
+            margin: 0!important;
+            border: 0!important;
+
+            .column-related_order {
+                width: 35%;
+            }
+        }
+    }
+
+    #rp-sub-subscription-schedule {
+
+        .inside {
+            margin: 0;
+            padding: 0;
+        }
+
+        .rp-sub-subscription-billing-cycle,
+        .rp-sub-subscription-lifespan {
+            padding: 10px 10px 15px 10px;
+            border-bottom: 1px solid #eee;
+
+            label {
+                display: block;
+                padding: 0 0 3px;
+            }
+
+            input {
+                float: left;
+                width: 55%;
+                min-width: 50px;
+            }
+
+            select {
+                float: left;
+                width: 40%;
+                min-width: 50px;
+                margin-left: 0.5%;
+            }
+        }
+
+        .rp-sub-schedule-list {
+            margin: 12px 0;
+            padding: 2px 0 0;
+
+            .rp-sub-schedule-list-item {
+                padding: 0 10px;
+                margin: 0;
+                margin-bottom: 10px;
+
+                .rp-sub-schedule-list-item-content {
+                    padding: 10px;
+                    background: #e5e5e5;
+                }
+            }
+
+            .rp-sub-schedule-list-item-renewal-order,
+            .rp-sub-schedule-list-item-renewal-payment,
+            .rp-sub-schedule-list-item-resume {
+
+                .rp-sub-schedule-list-item-content {
+                    background: #c6e1c6;
+                }
+            }
+
+            .rp-sub-schedule-list-item-payment-retry {
+
+                .rp-sub-schedule-list-item-content {
+                    background: #f8dda7;
+                }
+            }
+
+            .rp-sub-schedule-list-item-suspend,
+            .rp-sub-schedule-list-item-cancel {
+                background: #eba3a3;
+            }
+        }
+    }
+
+    #rp-sub-subscription-activity-log {
+
+        .inside {
+            margin: 0;
+            padding: 0;
+
+            .rp-sub-activity-log-view-all {
+                margin: 0;
+                padding: 6px 12px;
+                border-top: 1px solid #ddd;
+                text-align: right;
+            }
+
+            > ul {
+                margin: 12px 0;
+                padding: 2px 0 0;
+
+                > li {
+                    padding: 0 10px;
+                    margin: 0;
+                    margin-bottom: 10px;
+
+                    .rp-sub-activity-log-entry-content {
+                        padding: 10px;
+                        background: #e5e5e5;
+
+                        p {
+                            margin: 0;
+                            padding: 0;
+                            word-wrap: break-word;
+                        }
+
+                        .rp-sub-activity-log-entry-notes {
+                            margin-top: 6px;
+
+                            li {
+                                margin: 0;
+                                margin-top: 6px;
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    &.rp-sub-activity-log-entry-success {
+
+                        .rp-sub-activity-log-entry-content {
+                            background: #c6e1c6;
+                        }
+                    }
+
+                    &.rp-sub-activity-log-entry-warning,
+                    &.rp-sub-activity-log-entry-failed {
+
+                        .rp-sub-activity-log-entry-content {
+                            background: #f8dda7;
+                        }
+                    }
+
+                    &.rp-sub-activity-log-entry-error {
+
+                        .rp-sub-activity-log-entry-content {
+                            background: #eba3a3;
+                        }
+                    }
+
+                    .rp-sub-activity-log-entry-meta {
+                        padding: 10px;
+                        padding-bottom: 0;
+                        color: #999;
+                        margin: 0;
+                        font-size: 11px;
+
+                        a, a:hover {
+                            color: #999;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .rp_sub_subscription_validation_error {
+        background: #0085ba !important;
+        color: white !important;
+        border: none !important;
+        padding: 0 !important;
+        opacity: 1 !important;
+        max-width: 200px !important;
+
+        .ui-tooltip-content {
+            position: relative !important;
+            padding: 1em !important;
+        }
+
+        .ui-tooltip-content::after {
+            content: '' !important;
+            position: absolute !important;
+            border-style: solid !important;
+            display: block !important;
+            width: 0 !important;
+        }
+
+        .ui-tooltip-content::after {
+            top: -10px !important;
+            left: 15px !important;
+            border-color: #0085ba transparent !important;
+            border-width: 0 10px 10px !important;
+        }
+    }
+
+    /* Hide some order related elements that are not used for subscriptions */
+    .add-items .button.refund-items {
+        display: none;
+    }
+}
+
+/**
+ * =====================================================================================================================
+ * LOG ENTRY
+ * =====================================================================================================================
+ */
+
+.post-type-rp_sub_log_entry {
+
+    .wp-list-table {
+
+        .column-created {
+            width: 14%;
+        }
+
+        .column-event_type {
+            width: 16%;
+        }
+
+        .column-status {
+            width: 15%;
+        }
+
+        .column-subscription {
+            width: 14%
+        }
+
+        .column-order {
+            width: 11%;
+        }
+
+        .column-details {
+            width: 30%;
+        }
+    }
+}
+
+/**
+ * =====================================================================================================================
+ * GENERIC
+ * =====================================================================================================================
+ */
+
+.rp-sub-object-property-label {
+    display: inline-flex;
+    line-height: 2.5em;
+    border-radius: 4px;
+    border: 1px solid #e1e1e1;
+    background: 0;
+    margin: -.25em 0;
+    white-space: nowrap;
+    max-width: 100%;
+
+    span {
+        margin: 0 1em;
+        overflow: hidden;
+        font-weight: 700;
+    }
+}
+
+.rp-sub-status-label {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    line-height: 2.5em;
+    border-radius: 4px;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    margin: -.25em 0;
+    white-space: nowrap;
+    max-width: 100%;
+    background: #e5e5e5;
+    color: #777;
+
+    span {
+        margin: 0 1em;
+        overflow: hidden;
+    }
+
+    &-trial, &-trial:hover,
+    &-active, &-active:hover,
+    &-success, &-success:hover {
+        background: #c6e1c6;
+        color: #5b841b;
+    }
+
+    &-paused, &-paused:hover {
+        background: #c8d7e1;
+        color: #2e4453;
+    }
+
+    &-warning, &-warning:hover,
+    &-failed, &-failed:hover {
+        background: #f8dda7;
+        color: #94660c;
+    }
+
+    &-overdue, &-overdue:hover,
+    &-suspended, &-suspended:hover,
+    &-error, &-error:hover {
+        background: #eba3a3;
+        color: #761919;
+    }
+}
+
+/**
+ * =====================================================================================================================
+ * WOOCOMMERCE PRODUCT PAGE
+ * =====================================================================================================================
+ */
+
+.rp_sub_subscription_product-flag {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.25em;
+    padding: 3px 6px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+
+    .wp-list-table & {
+        margin-bottom: 0.25em;
+    }
+}
+
+#woocommerce-product-data {
+
+    .show-if-rp_sub_subscription_product-simple {
+
+        .rp-sub-subscription-product-time-length {
+            float: left;
+            width: 33.5%;
+            min-width: 50px;
+
+            @media only screen and (max-width: 1280px) {
+                width: 53.5%;
+            }
+        }
+
+        .rp-sub-subscription-product-time-period {
+            float: left;
+            width: 16%;
+            min-width: 50px;
+            margin-left: 0.5%;
+
+            @media only screen and (max-width: 1280px) {
+                width: 26%;
+            }
+        }
+    }
+
+    .show-if-rp_sub_subscription_product-variable {
+        border-top: 1px solid #eee;
+        margin-top: 20px;
+
+        label {
+            display: block;
+        }
+
+        .rp-sub-subscription-product-time-length {
+            float: left;
+            width: 66% !important;
+            min-width: 50px;
+        }
+
+        .rp-sub-subscription-product-time-period {
+            float: left;
+            width: 33.5% !important;
+            min-width: 50px;
+            margin-left: 0.5%;
+        }
+    }
+}
+
+.column-rightpress-product-list-shared-column {
+    width: 12ch;
+}
+
+/**
+ * =====================================================================================================================
+ * WOOCOMMERCE ORDER PAGE
+ * =====================================================================================================================
+ */
+
+#rp-sub-order-related-subscriptions {
+
+    .inside {
+        margin: 0;
+        padding: 0;
+
+        .wp-list-table {
+            margin: 0!important;
+            border: 0!important;
+
+            td {
+                cursor: initial;
+
+                &:first-child {
+                    padding-left: 1em;
+                }
+            }
+
+            .column-related_subscription_subscription {
+                width: 35%;
+            }
+        }
+    }
+}

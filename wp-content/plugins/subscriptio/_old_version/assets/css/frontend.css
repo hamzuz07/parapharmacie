@@ -1,0 +1,33 @@
+/**
+ * Subscriptio Plugin Frontend Styles
+ */
+.subscriptio_frontend_details {
+    width: 100%;
+    overflow: hidden;
+}
+.subscriptio_frontend_details_general {
+    float: left;
+    width: 48%;
+}
+.subscriptio_frontend_details_shipping {
+    float: right;
+    width: 48%;
+}
+.subscriptio_frontend_details .subscriptio_frontend_details_general h2,
+.subscriptio_frontend_details .subscriptio_frontend_details_shipping h2 {
+    margin-top: 0;
+}
+div.woocommerce a.subscriptio_button {
+    margin: 3px;
+}
+
+.subscriptio_stripe_existing_cards {
+    padding: 10px 0 0 0;
+}
+.subscriptio_stripe_credit_card_form {
+    padding: 10px 0 0 0;
+}
+#subscriptio_stripe-card-expiry-month,
+#subscriptio_stripe-card-expiry-year {
+    padding: 11px;
+}
